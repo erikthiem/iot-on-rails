@@ -1,7 +1,7 @@
 Apiotics.configure do |config|
   # The public and private keys are available on the Apiotics portal.  Navigate to your Hive's page and they will be towards the top
-  config.public_key = nil #set this to an Environment variable
-  config.private_key = nil #set this to an Environment variable
+  config.public_key = "" #set this to an Environment variable
+  config.private_key = "" #set this to an Environment variable
   
   # If your local comms server is accepting TCP connections, the local port is the port that it will accept connections on
   config.local_port = 8001

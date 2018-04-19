@@ -10,11 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180419142926) do
+ActiveRecord::Schema.define(version: 20180419143906) do
 
   create_table "apiotics_settings", force: :cascade do |t|
     t.string "key"
     t.text "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "medical_device_buzzers", force: :cascade do |t|
+    t.boolean "buzzer"
+    t.boolean "buzzer_ack"
+    t.boolean "buzzer_complete"
+    t.string "port_number"
+    t.boolean "port_number_ack"
+    t.boolean "port_number_complete"
+    t.integer "medical_device_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "medical_device_four_digit_displays", force: :cascade do |t|
+    t.boolean "clock"
+    t.boolean "clock_ack"
+    t.boolean "clock_complete"
+    t.string "display"
+    t.boolean "display_ack"
+    t.boolean "display_complete"
+    t.string "port_number"
+    t.boolean "port_number_ack"
+    t.boolean "port_number_complete"
+    t.integer "medical_device_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "medical_device_galvanic_skin_response_sensors", force: :cascade do |t|
+    t.integer "data"
+    t.boolean "data_ack"
+    t.boolean "data_complete"
+    t.string "port_number"
+    t.boolean "port_number_ack"
+    t.boolean "port_number_complete"
+    t.integer "medical_device_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "medical_device_heart_rate_sensors", force: :cascade do |t|
+    t.integer "data"
+    t.boolean "data_ack"
+    t.boolean "data_complete"
+    t.string "port_number"
+    t.boolean "port_number_ack"
+    t.boolean "port_number_complete"
+    t.integer "medical_device_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "medical_device_medical_devices", force: :cascade do |t|
+    t.string "apiotics_instance"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
